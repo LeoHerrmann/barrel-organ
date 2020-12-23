@@ -1,0 +1,57 @@
+@font-face {
+	font-family:"OpenSans";
+	font-weight:400;
+	src:url("OpenSans/OpenSans-Regular.ttf");
+}
+
+body {
+	color:#FFF;
+	background-color:#000;
+	font-family:"OpenSans", sans-serif;
+	font-size:1em;
+}
+
+#debugShowButton {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100px;
+	height:100px;
+	opacity:0;
+}
+#debugContainer {
+	position:fixed;
+	top:0;
+	left:0;
+	display:none;
+	z-index:10;
+	background-color:#000;
+}
+
+
+#audioFileInput {
+	position:absolute;
+	width:0.1px;
+	height:0.1px;
+	opacity:0;
+	z-index:-5;
+	overflow:hidden;
+}
+#audioFileInputContainer {
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	text-align:center;
+}
+#audioFileLabel {
+	display:inline-block;
+	font-size:1.5em;
+	border:1px solid #FFF;
+	padding:5px 10px 5px 10px;
+	transition-duration:0.2s;
+}
+#audioFileLabel:active, #audioFileLabel:focus {
+	color:#000;
+	background-color:#FFF;
+}

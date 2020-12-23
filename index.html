@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Drehorgel</title>
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<button id="debugShowButton" onclick="document.getElementById('debugContainer').style.display = 'block';"></button>
+		<div id="debugContainer">
+			<audio id="audio" controls></audio>
+			<p id="turningLabel"></p>
+			<p id="playbackLabel"></p>
+			<button onclick="document.getElementById('debugContainer').style.display = 'none';">Weg</button>
+		</div>
+
+
+		<div id="audioFileInputContainer">
+			<input id="audioFileInput" name="audioFileInput" type="file" accept="audio/*"/>
+			<label id="audioFileLabel" for="audioFileInput">Audio Auswählen</label>
+		</div>
+	</body>
+</html>
