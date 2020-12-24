@@ -1,13 +1,10 @@
 window.onload = function() {
 	window.addEventListener("devicemotion", function(e) {
 		var audio = document.getElementById("audio");
-		//var turningSpeed = Math.round(Math.abs(e.rotationRate.gamma/1.3))/100;
-		//var playbackSpeed = turningSpeed;
-		var turningSpeed = Math.round(Math.abs(e.rotationRate.gamma/3))/100;
-		var playbackSpeed = turningSpeed + 0.7;
 
+		var turningSpeed = Math.round(Math.abs(e.rotationRate.gamma / 3)) / 100;
+		var playbackSpeed = 1.2 * turningSpeed + 0.5;
 
-		//if (turningSpeed < 0.5) {
 		if (turningSpeed < 0.05) {
 			playbackSpeed = 0;
 			audio.pause();
@@ -24,6 +21,7 @@ window.onload = function() {
  		document.getElementById("playbackLabel").innerText = "Abspiel: " + playbackSpeed;
 		audio.playbackRate = playbackSpeed;
 	});
+
 
 
 	document.getElementById("audioFileInput").addEventListener("change", function(e) {
