@@ -9,12 +9,13 @@ window.onload = function() {
 			playbackSpeed = 0;
 			audio.pause();
 		}
+
 		else {
 			audio.play();
 		}
 
-		if (turningSpeed > 4) {
-			playbackSpeed = 4;
+		if (playbackSpeed > 3) {
+			playbackSpeed = 3;
 		}
 
  		document.getElementById("turningLabel").innerText = "Dreh: " + turningSpeed;
