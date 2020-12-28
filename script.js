@@ -3,7 +3,7 @@ window.onload = function() {
 		var audio = document.getElementById("audio");
 
 		var turningSpeed = Math.round(Math.abs(e.rotationRate.gamma / 3)) / 100;
-		var playbackSpeed = 1.2 * turningSpeed + 0.5;
+		var playbackSpeed = Math.round(100 * (1.2 * turningSpeed + 0.5)) / 100;
 
 		if (turningSpeed < 0.05) {
 			playbackSpeed = 0;
@@ -18,8 +18,8 @@ window.onload = function() {
 			playbackSpeed = 3;
 		}
 
- 		document.getElementById("turningLabel").innerText = "Dreh: " + turningSpeed;
- 		document.getElementById("playbackLabel").innerText = "Abspiel: " + playbackSpeed;
+ 		document.getElementById("turningLabel").innerText = "Rotation Rate: " + turningSpeed;
+ 		document.getElementById("playbackLabel").innerText = "Playback Rate: " + playbackSpeed;
 		audio.playbackRate = playbackSpeed;
 	});
 
