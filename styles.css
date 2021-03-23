@@ -21,7 +21,7 @@ button {
 	font-size: 1.2rem;
 	height: 3rem;
 	width: 3rem;
-	color: #FFFFFF;
+	color: #DDDDDD;
 }
 
 
@@ -61,14 +61,13 @@ button {
 
 #debugShowButton {
 	position: fixed;
-	top: 0;
+	bottom: 0;
 	left: 0;
-	color: #DDDDDD;
 }
 
 #debugContainer {
 	position: fixed;
-	top: 0;
+	bottom: 0;
 	left: 0;
 	display: none;
 	z-index: 10;
