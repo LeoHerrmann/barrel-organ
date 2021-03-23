@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="A web application which magically turns your phone into a barrel organ "/>
 		<title>Barrel Organ</title>
 		<link rel="stylesheet" type="text/css" href="Fontello/css/fontello.css"/>
 		<link rel="stylesheet" type="text/css" href="styles.css"/>
@@ -11,13 +12,13 @@
 	</head>
 
 	<body>
-		<button id="debugShowButton" class="icon-debug" onclick="document.getElementById('debugContainer').style.display = 'block';"></button>
+		<button id="debugShowButton" class="icon-debug" aria-label="Open debug menu" onclick="document.getElementById('debugContainer').style.display = 'block';"></button>
 
 		<div id="debugContainer">
 			<audio id="audio" controls></audio>
 			<p id="turningLabel"></p>
 			<p id="playbackLabel"></p>
-			<button class="icon-cancel" onclick="document.getElementById('debugContainer').style.display = 'none';"></button>
+			<button aria-label="Close debug menu" class="icon-cancel" onclick="document.getElementById('debugContainer').style.display = 'none';"></button>
 		</div>
 
 
