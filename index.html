@@ -4,17 +4,18 @@
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>Barrel Organ</title>
+		<link rel="stylesheet" type="text/css" href="Fontello/css/fontello.css"/>		
 		<link rel="stylesheet" type="text/css" href="styles.css"/>
 		<script src="script.js"></script>
 	</head>
 
 	<body>
-		<button id="debugShowButton" onclick="document.getElementById('debugContainer').style.display = 'block';"></button>
+		<button id="debugShowButton" class="icon-debug" onclick="document.getElementById('debugContainer').style.display = 'block';"></button>
 		<div id="debugContainer">
 			<audio id="audio" controls></audio>
 			<p id="turningLabel"></p>
 			<p id="playbackLabel"></p>
-			<button onclick="document.getElementById('debugContainer').style.display = 'none';">X</button>
+			<button class="icon-cancel" onclick="document.getElementById('debugContainer').style.display = 'none';"></button>
 		</div>
 
 
