@@ -11,13 +11,13 @@
 	</head>
 
 	<body>
-		<button id="debugShowButton" class="icon-debug" onclick="document.getElementById('debugContainer').style.display = 'block';"></button>
+		<button id="debugShowButton" class="icon-debug" aria-label="Open debug menu" onclick="document.getElementById('debugContainer').style.display = 'block';"></button>
 
 		<div id="debugContainer">
 			<audio id="audio" controls></audio>
 			<p id="turningLabel"></p>
 			<p id="playbackLabel"></p>
-			<button class="icon-cancel" onclick="document.getElementById('debugContainer').style.display = 'none';"></button>
+			<button aria-label="Close debug menu" class="icon-cancel" onclick="document.getElementById('debugContainer').style.display = 'none';"></button>
 		</div>
 
 
