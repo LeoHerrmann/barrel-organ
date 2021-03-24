@@ -9,6 +9,7 @@ window.onload = function() {
 		}
 
 		motion_detected = true;
+		document.getElementById("noGyroscopeWarning").style.display = "none";
 
 		var audio = document.getElementById("audio");
 
