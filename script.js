@@ -1,5 +1,15 @@
+var motion_detected = false;
+
+
+
 window.onload = function() {
 	window.addEventListener("devicemotion", function(e) {
+		if (e.rotationRate.gamma === null) {
+			return false;
+		}
+
+		motion_detected = true;
+
 		var audio = document.getElementById("audio");
 
 		var turningSpeed = Math.round(Math.abs(e.rotationRate.gamma / 3)) / 100;
@@ -33,4 +43,12 @@ window.onload = function() {
 		audioPlayer.src = URL.createObjectURL(this.files[0]);
 		audioFileLabel.innerText = audioFileInput.files[0].name;
 	});
+
+
+
+	setTimeout(function() {
+		if (motion_detected === false) {
+			alert("Warning: Since no motion could be detected in the first five seconds since the launch of this application, your device possibly does not have a gyroscope or it is not supported by your web browser, in which case the application is not going to work properly.");
+		}
+	}, 5000);
 };
